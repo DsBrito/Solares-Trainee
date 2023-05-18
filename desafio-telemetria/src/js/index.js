@@ -19,7 +19,6 @@ console.log(body);
  *
 */
 const changeBottonImg = document.querySelector(".botton-image");
-const changeLogo = document.querySelector(".logo");
 
 lightBotton.addEventListener("click", () => {
 
@@ -28,46 +27,70 @@ lightBotton.addEventListener("click", () => {
     if(mode){
         console.log("black mode off")
         console.log("click-light-button");
-        changeLogo.setAttribute("src","./src/images/itens/solares.png");
         changeBottonImg.setAttribute("src","./src/images/itens/sun.png");
 
     }
     else{
         console.log("black mode on")
         console.log("click-light-button");
-        changeLogo.setAttribute("src","./src/images/itens/solaresmoon.png");
         changeBottonImg.setAttribute("src","./src/images/itens/moon.png");
     }
 
 
 })
 
-const changeOff = document.querySelector(".off");
-const changeOn = document.querySelector(".on");
+
+//Variaveis boleanas ON/OFF
 const toggleButton1 = document.getElementById('toggleButton1');
 const toggleButton2 = document.getElementById('toggleButton2');
-let isOn1 = false;
-let isOn2 = false;
+const state = {
+  isOn1: false,
+  isOn2: false
+};
 
-toggleButton1.addEventListener('click', function() {
-  isOn1 = !isOn1;
-  updateButtonState(toggleButton1, isOn1);
-  
+const handler = {
+  set: function(target, key, value) {
+    target[key] = value;
+    updateButtonState(key, value);
+    return true;
+  }
+};
+
+const stateProxy = new Proxy(state, handler);
+
+function updateButtonState(key, value) {
+  if (key === 'isOn1') {
+    toggleButton1.textContent = value ? 'ON' : 'OFF';
+    toggleButton1.classList.toggle('on', value);
+    toggleButton1.classList.toggle('off', !value);
+  } else if (key === 'isOn2') {
+    toggleButton2.textContent = value ? 'ON' : 'OFF';
+    toggleButton2.classList.toggle('on', value);
+    toggleButton2.classList.toggle('off', !value);
+  }
+}
+
+// Exemplo de alteração nas variáveis booleanas
+stateProxy.isOn1 = 1;
+stateProxy.isOn2 = 1;
+
+
+const toggleButton = document.getElementById('toggleButton');
+let isOn = false;
+
+toggleButton.addEventListener('click', function() {
+  isOn = !isOn;
+  updateButtonState();
 });
 
-toggleButton2.addEventListener('click', function() {
-  isOn2 = !isOn2;
-  updateButtonState(toggleButton2, isOn2);
-});
-
-function updateButtonState(button, isOn) {
+function updateButtonState() {
   if (isOn) {
-    button.textContent = 'On';
-    button.classList.remove('off');
-    button.classList.add('on');
+    toggleButton.textContent = 'On';
+    toggleButton.classList.remove('off');
+    toggleButton.classList.add('on');
   } else {
-    button.textContent = 'Off';
-    button.classList.remove('on');
-    button.classList.add('off');
+    toggleButton.textContent = 'Off';
+    toggleButton.classList.remove('on');
+    toggleButton.classList.add('off');
   }
 }
