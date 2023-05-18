@@ -38,6 +38,8 @@ header .botton-image {
     border-radius: 100px;
 }
 
+
+
 header .logo.logo:hover,
 header .botton-image:hover{
     transform: scale(1.15);
@@ -49,3 +51,43 @@ header .botton-image:hover{
 .black-mode {
     background-color: #a8a8a8;
 }
+
+
+  .button-container,.off,
+  .on {
+    text-align: center;
+  }
+  
+  .button-container button,
+  .off,
+  .on {
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .off {
+    background-color: red;
+  }
+  
+  .on {
+    background-color: green;
+  }
+  
+  #text-container {
+    text-align: center;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+  h1 {
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 20px;
+    color: white;
+  }
+  
