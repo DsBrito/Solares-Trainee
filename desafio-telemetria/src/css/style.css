@@ -1,112 +1,120 @@
 body {
-    font-family: 'Kanit', sans-serif;
-    background: #050758 ;
-    /* Substitua './src/images/background/poke-card.png' pelo caminho correto da sua imagem */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  font-family: 'Kanit', sans-serif;
+  background: #050758;
+  /* Substitua './src/images/background/poke-card.png' pelo caminho correto da sua imagem */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: none;
+  display: flex;
+  justify-content: space-between;
+  padding: none;
 }
 
 body.black-mode {
-    background-color: #212121;
-    color: #f5f5f5;
+  background-color: #212121;
+  color: #f5f5f5;
 }
 
-header #change-light { 
-    background: none;
-    border: none;
+header #change-light {
+  background: none;
+  border: none;
 }
 
-header .logo{
-    width: 200px;
-    background: none;
-    padding: none;
-    border-radius: 200px;
+header .logo {
+  width: 200px;
+  background: none;
+  padding: none;
+  border-radius: 200px;
 
 }
 
 header .botton-image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 70px;
-    background: none;
-    padding: none;
-    border-radius: 100px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  background: none;
+  padding: none;
+  border-radius: 100px;
 }
 
 
 
 header .logo.logo:hover,
-header .botton-image:hover{
-    transform: scale(1.15);
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
+header .botton-image:hover {
+  transform: scale(1.15);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 
 }
 
 .black-mode {
-    background-color: #a8a8a8;
+  background-color: #a8a8a8;
 }
 
 
-  .button-container {
-    text-align: center;
-  }
-  
-  .button-container button
-  {
-    width: 100px;
-    height: 30px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .off {
-    background-color: red;
-  }
-  
-  .on {
-    background-color: green;
-  }
-  
-  #text-container {
-    text-align: center;
-  }
-  
-  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.button-container {
+  text-align: center;
+}
 
-  h1 {
-    font-family: 'Roboto', sans-serif;
+.button-container button {
 
-    font-size: 20px;
-    color: white;
-  }
-  
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-  button {
-    width: 100px;
-    height: 40px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .off {
-    background-color: red;
-  }
-  
-  .on {
-    background-color: green;
-  }
+.off {
+  background-color: red;
+}
+
+.on {
+  background-color: green;
+}
+
+#text-container {
+  text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+
+  font-size: 20px;
+  color: white;
+}
+
+
+button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.off {
+  background-color: red;
+}
+
+.on {
+  background-color: green;
+}
+
+.bolean-box {
+  display: flex;
+  justify-content: space-between;
+
+
+}

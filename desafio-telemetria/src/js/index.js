@@ -7,10 +7,6 @@
 
 const lightBotton = document.getElementById("change-light");
 
-/**
- * Pegar no JS o elemento HTML correspondente ao body
- */
-
 const body = document.querySelector("body");
 console.log(body);
 
@@ -71,26 +67,7 @@ function updateButtonState(key, value) {
 }
 
 // Exemplo de alteração nas variáveis booleanas
-stateProxy.isOn1 = 1;
+stateProxy.isOn1 = 0;
 stateProxy.isOn2 = 1;
 
 
-const toggleButton = document.getElementById('toggleButton');
-let isOn = false;
-
-toggleButton.addEventListener('click', function() {
-  isOn = !isOn;
-  updateButtonState();
-});
-
-function updateButtonState() {
-  if (isOn) {
-    toggleButton.textContent = 'On';
-    toggleButton.classList.remove('off');
-    toggleButton.classList.add('on');
-  } else {
-    toggleButton.textContent = 'Off';
-    toggleButton.classList.remove('on');
-    toggleButton.classList.add('off');
-  }
-}
