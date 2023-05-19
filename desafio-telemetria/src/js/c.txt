@@ -66,8 +66,57 @@ function updateButtonState(key, value) {
   }
 }
 
+
 // Exemplo de alteração nas variáveis booleanas
-stateProxy.isOn1 = 0;
+stateProxy.isOn1 = 1;
 stateProxy.isOn2 = 1;
 
+// connect to the websocket server
+const socket = io.connect('https://telemetria-trainee-2023.onrender.com');
+console.log('entrei aqui 1: ')
+// this message is triggered when the websocket gets connected
+socket.on('connect', () => console.log('websocket connected!'))
+console.log('entrei aqui 2: ')
 
+// this message is triggered when the websocket gets disconnected
+socket.on('disconnect', () => console.log('websocket disconnect'))
+console.log('entrei aqui 3: ')
+
+// receive a message from the server on the info 'channel'
+socket.on("info", data => {
+  console.log('entrei aqui 4: ')
+
+  //console.log('data: ', data.estadoStringSolar1)
+  stateProxy.isOn1 =data.estadoStringSolar1;
+  stateProxy.isOn2 =data.estadoStringSolar2;
+});
+
+
+/*
+
+socket.on("info", data => {
+  console.log('entrei aqui 4: ')
+
+  console.log('data: ', data.estadoStringSolar1)
+  console.log('data: ', data.estadoStringSolar2)
+if(data.estadoStringSolar1 == 1){
+  toggleButton1.textContent = 'ON'
+  toggleButton1.classList.toggle('on');
+
+}
+else if(data.estadoStringSolar1==0){
+  toggleButton1.textContent = 'OFF'
+  toggleButton1.classList.toggle('off');
+}
+if(data.estadoStringSolar2 == 1){
+  toggleButton2.textContent = 'ON'
+  toggleButton2.classList.toggle('on', true);
+
+}
+else if(data.estadoStringSolar2==0){
+  toggleButton2.textContent = 'OFF'
+  toggleButton2.classList.toggle('off');
+}
+});
+
+*/
