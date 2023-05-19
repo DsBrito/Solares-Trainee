@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Permissions-Policy: interest-cohort=() header set. -->
+    <meta name="permissions-policy" content="interest-cohort=()">
+    <script src="/socket.io/socket.io.js"></script> 
+    <title>Barcos</title>
+</head>
+<body>
+    
+    <h1 id="result">Resultado:</h1>
+    <script>
+        let socket = io.connect();
+        socket.on('info', function(data) {
+            document.getElementById('result').innerHTML = "Resultado:" + `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+        });
+
+        socket.on('recordStatus', function(status) {
+            // get the button to change the text
+            /*let btn = document.getElementById('btn');
+            if (status) {
+                btn.innerHTML = 'Gravando';
+            } else {
+                btn.innerHTML = 'Gravar';
+            }*/
+        });
+
+        // wait page load
+        /*window.onload = function() {
+            // get the button
+            let btn = document.getElementById('btn');
+            // add the click event
+            btn.addEventListener('click', function() {
+                // send the event to the server
+                socket.emit('record');
+            });
+        }*/
+    </script>
+
+    <!-- <button id="btn">gravar</button> -->
+</body>
+</html>

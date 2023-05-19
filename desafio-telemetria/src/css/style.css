@@ -85,7 +85,6 @@ header .botton-image:hover {
 
 h1 {
   font-family: 'Roboto', sans-serif;
-
   font-size: 20px;
   color: rgb(250, 235, 250);
 }
@@ -107,3 +106,25 @@ button {
 .on {
   background-color: green;
 }
+
+.chartContainer{
+  width: 500px;
+  height: 300px;
+  position: fixed; 
+  bottom: 20px; 
+  left: 20px;
+}
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css");
+
+#info {
+  
+  font-size: 14px;
+  border: 4px outset yellow;
+  width: 400px; /* Largura fixa de 300 pixels */
+  padding: 10px; /* Adicionando um espaçamento interno para melhor visualização */
+  box-sizing: border-box; /* Incluindo a largura da borda e o espaçamento no cálculo da largura total */
+
+}
+
+/*grafico*/
