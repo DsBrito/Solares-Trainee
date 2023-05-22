@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(https://essolar.com.br/wp-content/uploads/2020/05/essolar1305.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 30px auto 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    box-shadow: 0;
+}
+
+
+.container h2 {
+    text-align: center;
+}
+
+.container .user-icon {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container .user-icon img {
+    width: 100px;
+    height: 100px;
+}
+
+.container input[type="text"],
+.container input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.container label[for="username"] {
+    font-size: 14px;
+}
+
+.container label[for="remember"],
+.container label[for="revealPassword"] {
+    font-size: 12px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.container button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.container button:hover {
+    background-color: #45a049;
+}
+
+.remember-container {
+    margin-top: 10px;
+}
+
+.remember-container::before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: 80%;
+    }
+}

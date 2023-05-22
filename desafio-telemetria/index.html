@@ -12,49 +12,67 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
 
 </head>
 
 <body>
     <header>
         <a href="#">
+            <!-- imagem do solares (canto superior esquerdo)-->
             <img src="./src/images/itens/solaresmoon.png" alt="solares" class="logo" />
         </a>
-        <div class="button-container">
-            <button id="toggleButton1" class="off">Off</button>
+        <!-- button para string solar 2-->
+        <div class="string-container">
+            <button id="toggleSolar1" class="off">Off</button>
             <h1>String Solar 1</h1>
         </div>
 
-        <div class="button-container">
-            <button id="toggleButton2" class="off">Off</button>
+        <div class="string-container">
+            <!-- button para string solar 2-->
+            <button id="toggleSolar2" class="off">Off</button>
             <h1>String Solar 2</h1>
         </div>
 
-        <button id="change-light">
-            <img src="./src/images/itens/sun.png" alt="moon-image" class="botton-image" />
+        <button id="changeLight">
+            <img src="./src/images/itens/sun.png" alt="moon-image" class="theme-image" />
         </button>
 
-        <div class="chartContainer">
-            <canvas id="myChart"></canvas>
-          </div>
+        <!-- gráfico para velocidade do motor-->
+        <div class="chart-engine-speed">
+            <canvas id="engineSpeed"></canvas>
+        </div>
 
+        <!-- gráfico para velocidade do motor-->
+        <div class="chart-engine-current">
+            <canvas id="engineCurrent"></canvas>
+        </div>
 
+        <!-- gráfico para corrente do motor-->
+        <div class="chart-battery-current">
+            <canvas id="batteryCurrent"></canvas>
+        </div>
 
     </header>
 
-    <h1 id="result"> <br><br>
+    <h1 class="result"> <br><br>
         <div id="info"></div>
-
     </h1>
 
+    <div id="map"></div>
 
+    <!-- script para utilizar o mapa -->
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
 
+    <!-- script para utilizar o socket sem o import (globalmente)-->
     <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"
         integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H"
         crossorigin="anonymous"></script>
 
+    <!-- script para utlizar o chart/gráfico-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <!-- script execultavel-->
     <script src="./src/js/index.mjs"></script>
 
 </body>
