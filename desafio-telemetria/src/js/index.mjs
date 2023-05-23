@@ -314,37 +314,37 @@ info.innerHTML = "Resultado:<br>" +
                 "<br>  -> update At: " + data.updateAt
               ;
 
-  //Tratamento dos indicadores booleanos            
-    if(data.estadoStringSolar1 == 1 && data.estadoStringSolar2==1){
-      toggleSolar1.textContent = 'ON'
-      toggleSolar2.textContent = 'ON'
-      toggleSolar1.classList.toggle('on');
-      toggleSolar2.classList.toggle('on');
-    }
-    else 
-    if(data.estadoStringSolar1==0 && data.estadoStringSolar2==0){
-      toggleSolar1.textContent = 'OFF'
-      toggleSolar2.textContent = 'OFF'
-      toggleSolar2.classList.toggle('off');
-      toggleSolar1.classList.toggle('off');
-    }
+  // Tratamento dos indicadores booleanos
+  if (data.estadoStringSolar1 == 1 && data.estadoStringSolar2 == 1) {
+    toggleSolar1.textContent = 'ON';
+    toggleSolar2.textContent = 'ON';
+    toggleSolar1.classList.remove('off');
+    toggleSolar1.classList.add('on');
+    toggleSolar2.classList.remove('off');
+    toggleSolar2.classList.add('on');
+  } else if (data.estadoStringSolar1 == 0 && data.estadoStringSolar2 == 0) {
+    toggleSolar1.textContent = 'OFF';
+    toggleSolar2.textContent = 'OFF';
+    toggleSolar1.classList.remove('on');
+    toggleSolar1.classList.add('off');
+    toggleSolar2.classList.remove('on');
+    toggleSolar2.classList.add('off');
+  } else if (data.estadoStringSolar1 == 1 && data.estadoStringSolar2 == 0) {
+    toggleSolar1.textContent = 'ON';
+    toggleSolar1.classList.remove('off');
+    toggleSolar1.classList.add('on');
+    toggleSolar2.textContent = 'OFF';
+    toggleSolar2.classList.remove('on');
+    toggleSolar2.classList.add('off');
+  } else if (data.estadoStringSolar1 == 0 && data.estadoStringSolar2 == 1) {
+    toggleSolar1.textContent = 'OFF';
+    toggleSolar1.classList.remove('on');
+    toggleSolar1.classList.add('off');
+    toggleSolar2.textContent = 'ON';
+    toggleSolar2.classList.remove('off');
+    toggleSolar2.classList.add('on');
+  }
 
-    else 
-    if(data.estadoStringSolar1 == 1 && data.estadoStringSolar2==0){
-      toggleSolar1.textContent = 'ON'
-      toggleSolar1.classList.toggle('on');
-      toggleSolar2.textContent = 'OFF'
-      toggleSolar2.classList.toggle('off');
-    }
-    else 
-    if(data.estadoStringSolar1==0 && data.estadoStringSolar2==1){
-      toggleSolar1.textContent = 'OFF'
-      toggleSolar1.classList.toggle('off');
-
-      toggleSolar2.textContent = 'ON'
-      toggleSolar2.classList.toggle('on');
-
-    }
 
   //console.log('Boleano: ', data.estadoStringSolar1);
   //console.log('Boleano: ', data.estadoStringSolar2);
