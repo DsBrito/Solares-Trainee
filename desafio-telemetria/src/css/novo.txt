@@ -1,0 +1,169 @@
+/* background - corpo */
+body {
+  font-family: 'Kanit', sans-serif;
+  background: #050758;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: auto;
+}
+
+body.black-mode {
+  background-color: #212121;
+  color: #f5f5f5;
+}
+
+/************************************/
+/* background - cabeça */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: none;
+}
+
+header #changeLight {
+  background: none;
+  border: none;
+}
+
+header .result {
+  background: none;
+  border: none;
+  left: 0;
+}
+
+header .logo {
+  width: 200px;
+  background: none;
+  padding: none;
+  border-radius: 200px;
+}
+
+header .theme-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  background: none;
+  padding: none;
+  border-radius: 100px;
+}
+
+header .logo.logo:hover,
+header .theme-image:hover {
+  transform: scale(1.15);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+/************************************/
+/* variáveis booleanas */
+.string-container {
+  text-align: center;
+}
+
+.string-container button {
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.off {
+  background-color: red;
+}
+
+.on {
+  background-color: green;
+}
+
+#toggleSolar2,
+#toggleSolar1 {
+  text-align: center;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/************************************/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* resultado (variáveis retiradas do site) */
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: rgb(250, 235, 250);
+  left: 0;
+}
+
+#info {
+  font-size: 14px;
+  border: 4px outset yellow;
+  width: 400px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/************************************/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css");
+
+/* grafíco - Velocidade do motor e */
+.chart-engine-speed {
+  max-width: 100%;
+  width: 450px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+/* grafíco - corrente do motor e */
+.chart-engine-current {
+  max-width: 100%;
+  width: 450px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+/* grafíco - corrente da bateria */
+.chart-battery-current {
+  max-width: 100%;
+  width: 450px;
+  height: 200px;
+}
+
+#map {
+  max-width: 100%;
+  height: 500px;
+  font-size: 14px;
+  border: 4px outset yellow;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+
+#map {
+  width: 100%;
+  max-width: 1000px;
+  height: 500px;
+  font-size: 14px;
+  border: 4px outset yellow;
+  padding: 10px;
+  box-sizing: border-box;
+
+  transform: translateY(-50%);
+  top: 40%;
+  right: 40%;
+  left: 40%;
+  position: absolute;
+
+  
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telemtria-dsb</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
+
+</head>
+
+<body>
+    <header>
+        <div>            
+            <!-- imagem do solares (canto superior esquerdo)-->
+            <img src="./src/images/itens/solaresmoon.png" alt="solares" class="logo" />
+                    <!-- button para string solar 2-->
+                <br><br><br><br><br><br>
+                <div class="string-container">
+                    <button id="toggleSolar1" class="off">Off</button>
+                    <h1>String Solar 1</h1>
+                    <br><br><br><br><br><br>
+
+                    <!-- button para string solar 2-->
+                    <button id="toggleSolar2" class="off">Off</button>
+                        <h1>String Solar 2</h1>
+                </div>
+        </div>
+        
+            <button id="changeLight">
+            <img src="./src/images/itens/sun.png" alt="moon-image" class="theme-image" />
+        </button>
+                 
+        <div class="content">
+            <h1 class="result">
+              <div id="info"></div>
+            </h1>
+
+            <div id="map"></div>
+            <div class="charts"></div>
+            <br>
+
+            <div class="chart-container">
+
+                <!-- gráfico para velocidade do motor-->
+                <div class="chart-engine-speed">
+                    <canvas id="engineSpeed"></canvas>
+                </div>
+
+                <!-- gráfico para velocidade do motor-->
+                <div class="chart-engine-current">
+                    <canvas id="engineCurrent"></canvas>
+                </div>
+
+                <!-- gráfico para corrente do motor-->
+                <div class="chart-battery-current">
+                    <canvas id="batteryCurrent"></canvas>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- script para utilizar o mapa -->
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <!-- script para utilizar o socket sem o import (globalmente)-->
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"
+        integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H"
+        crossorigin="anonymous"></script>
+
+    <!-- script para utlizar o chart/gráfico-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- script execultavel-->
+    <script src="./src/js/index.mjs"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+/* background - corpo */
+body {
+    font-family: 'Kanit', sans-serif;
+    background: #050758;
+    overflow: auto;
+    align-items: flex-start;
+    display: flex;
+    justify-content: flex-start;
+  
+    /* Adicione esta linha */
+  }
+  
+  
+  body.black-mode {
+    background-color: #212121;
+    color: #f5f5f5;
+  }
+  
+  /************************************/
+  /* background - cabeça */
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: none;
+  }
+  
+  header #changeLight {
+    background: none;
+    border: none;
+  }
+  
+  
+  
+  header .logo {
+    width: 200px;
+    background: none;
+    padding: none;
+    border-radius: 200px;
+    align-self: flex-start; /* Add this line */
+    margin-top: 10px; /* Add this line */
+  }
+  
+  
+  header .theme-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    background: none;
+    padding: none;
+    border-radius: 100px;
+  }
+  
+  header .logo.logo:hover,
+  header .theme-image:hover {
+    transform: scale(1.15);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  
+  }
+  
+  header button {
+    width: 100px;
+    height: 400px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /************************************/
+  /*variáveis booleanas*/
+  .string-container {
+    text-align: center;
+  }
+  
+  .string-container button {
+  
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .off {
+    background-color: red;
+  }
+  
+  .on {
+    background-color: green;
+  }
+  
+  #toggleSolar2,
+  #toggleSolar1 {
+    text-align: center;
+  }
+  
+  
+  /************************************/
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+  
+  /*resultado (variáveis retiradas do site))*/
+  h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: rgb(250, 235, 250);
+    left: 0;
+    position: center;
+  }
+  
+  #info {
+    font-size: 14px;
+    border: 4px outset yellow;
+    width: 400px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  /************************************/
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css");
+  
+  #engineCurrent,
+  #batteryCurrent,
+  #engineSpeed {
+    border: 4px outset yellow;
+  
+    box-sizing: border-box;
+  
+    font-size: 16px; /* Increase the font size value as needed */
+    max-width: 100%;
+    width: 450px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  
+  
+  /* grafíco - Velocidade do motor e */
+  .chart-engine-speed {
+    max-width: 100%;
+    width: 450px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  
+  /* grafíco - corrente do motor e */
+  .chart-engine-current {
+    max-width: 100%;
+    width: 450px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  
+  /* grafíco - corrente da bateria */
+  .chart-battery-current {
+    max-width: 100%;
+    width: 460px;
+    height: 200px;
+    margin-bottom: 20px;
+  
+  }
+  
+  
+  
+  
+  #map {
+    max-width: 100%;
+    height: 600px; /* Increase the height value as needed */
+    font-size: 14px;
+    border: 4px outset yellow;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 30px; /* Increase the height value as needed */
+  }
+  
+  .chart-container > div {
+    flex: 1;
+    margin-right: 10px;
+    height: 100%; /* Add this line */
+  }
+  
