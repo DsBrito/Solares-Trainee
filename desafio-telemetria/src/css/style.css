@@ -189,3 +189,11 @@ h1 {
   padding: 10px;
   box-sizing: border-box;
 }
+
+#logoffButton{
+  font-size: 14px;
+  border: 4px outset yellow;
+  background-color: yellow;
+  padding: 10px;
+  box-sizing: border-box;
+}

@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/style2.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
 
 </head>
@@ -31,6 +31,17 @@
                     <!-- button para string solar 2-->
                     <button id="toggleSolar2" class="off">Off</button>
                         <h1>String Solar 2</h1>
+                        <br><br><br><br><br><br>
+
+                    <button id="logoffButton"></button>
+                    <h1>Logoff</h1>
+                    <br><br><br><br><br><br>
+                    <script>
+                        document.getElementById("logoffButton").addEventListener("click", function() {
+                        localStorage.removeItem("username");
+                        window.location.href = "login.html";
+                        });
+                    </script>
                 </div>
         </div>
         

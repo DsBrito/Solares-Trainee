@@ -85,13 +85,25 @@ body {
   }
   
   .off {
+    border: 4px outset reds;
     background-color: red;
-  }
+    box-sizing: border-box;  }
   
   .on {
+    border: 4px outset green;
     background-color: green;
+    box-sizing: border-box;
+
   }
   
+  #logoffButton{
+    font-size: 14px;
+    border: 4px outset yellow;
+    background-color: yellow;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
   #toggleSolar2,
   #toggleSolar1 {
     text-align: center;
@@ -118,6 +130,9 @@ body {
     box-sizing: border-box;
   }
   
+
+
+
   /************************************/
   @import url("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css");
   
@@ -172,6 +187,7 @@ body {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
+
   }
   
   .chart-container {

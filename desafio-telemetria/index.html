@@ -34,6 +34,8 @@
             <h1>String Solar 2</h1>
         </div>
 
+
+
         <button id="changeLight">
             <img src="./src/images/itens/sun.png" alt="moon-image" class="theme-image" />
         </button>
@@ -58,8 +60,19 @@
     <h1 class="result"> <br><br>
         <div id="info"></div>
     </h1>
-
+    <div class="logoff">
+        <button id="logoffButton">Logoff</button>
+        <script>
+            document.getElementById("logoffButton").addEventListener("click", function() {
+            localStorage.removeItem("username");
+            window.location.href = "login.html";
+            });
+        </script>
+    </div>
     <div id="map"></div>
+
+
+
 
     <!-- script para utilizar o mapa -->
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
