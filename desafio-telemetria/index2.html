@@ -18,41 +18,43 @@
 
 <body>
     <header>
-        <div>            
+        <div> 
+
             <!-- imagem do solares (canto superior esquerdo)-->
             <img src="./src/images/itens/solaresmoon.png" alt="solares" class="logo" />
-                    <!-- button para string solar 2-->
-                <br><br><br><br><br><br>
-                <div class="string-container">
-                    <button id="toggleSolar1" class="off">Off</button>
+            <br><br><br><br><br><br>
+
+            <div class="string-container">
+                <!-- button para string solar 2-->
+                <button id="toggleSolar1" class="off">Off</button>
                     <h1>String Solar 1</h1>
-                    <br><br><br><br><br><br>
+                <br><br><br><br><br><br>
 
-                    <!-- button para string solar 2-->
-                    <button id="toggleSolar2" class="off">Off</button>
-                        <h1>String Solar 2</h1>
-                        <br><br><br><br><br><br>
+                <!-- button para string solar 2-->
+                <button id="toggleSolar2" class="off">Off</button>
+                    <h1>String Solar 2</h1>
+                <br><br><br><br><br><br>
 
-                    <button id="logoffButton"></button>
-                    <h1>Logoff</h1>
-                    <br><br><br><br><br><br>
-                    <script>
-                        document.getElementById("logoffButton").addEventListener("click", function() {
-                        localStorage.removeItem("username");
-                        window.location.href = "login.html";
-                        });
-                    </script>
-                </div>
+                <!-- button para o redirecionamento para a tela de login (logoff)-->
+                <button id="logoffButton"></button>
+                    <h1>Sair</h1>
+                <br><br><br><br><br><br>
+            </div>
+       
         </div>
         
-            <button id="changeLight">
+        <button id="changeLight">
             <img src="./src/images/itens/sun.png" alt="moon-image" class="theme-image" />
         </button>
                  
         <div class="content">
+
+            <!-- janela para informações vindas do site-->
             <h1 class="result">
-              <div id="info"></div>
+                <div id="info"></div>
             </h1>
+                
+            <!-- janela para informações de localização do "barco" (mapa) -->
 
             <div id="map"></div>
             <div class="charts"></div>
@@ -60,17 +62,17 @@
 
             <div class="chart-container">
 
-                <!-- gráfico para velocidade do motor-->
+                <!-- janela de gráfico para velocidade do motor-->
                 <div class="chart-engine-speed">
                     <canvas id="engineSpeed"></canvas>
                 </div>
 
-                <!-- gráfico para velocidade do motor-->
+                <!-- janela de gráfico para velocidade do motor-->
                 <div class="chart-engine-current">
                     <canvas id="engineCurrent"></canvas>
                 </div>
 
-                <!-- gráfico para corrente do motor-->
+                <!-- janela de gráfico para corrente do motor-->
                 <div class="chart-battery-current">
                     <canvas id="batteryCurrent"></canvas>
                 </div>
@@ -80,13 +82,14 @@
     </header>
 
 
-    <!-- script para utilizar o mapa -->
+    <!-- script para utilização do mapa -->
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
 
     <!-- script para utilizar o socket sem o import (globalmente)-->
     <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"
         integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
 
     <!-- script para utlizar o chart/gráfico-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
