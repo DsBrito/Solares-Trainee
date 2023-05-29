@@ -1,13 +1,17 @@
+/*
+    Corpo da página
+
+    Imagem de fundo cover -> para ocupar a tela toda
+    Alinhamento do loguin/formulario no meio horizontal -> aling-itens = start 
+
+*/
 body {
     font-family: Arial, sans-serif;
     background-image: url(https://essolar.com.br/wp-content/uploads/2020/05/essolar1305.png);
-    background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     align-items: start;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+
 }
 
 .container {
