@@ -1,6 +1,6 @@
 /* mensagem de alerta */
-/*alert("Desafio Treineer em construção..");
-*/
+alert("Desafio Treineer em construção..");
+/**/
 
     
   /************************************/

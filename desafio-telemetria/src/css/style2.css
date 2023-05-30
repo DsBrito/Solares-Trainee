@@ -1,13 +1,16 @@
-/* background - corpo */
+/*****************************************************************************************************************************************/
+/****                                               [Corpo da página]                                                                 ****/
+/*   Imagem de fundo cover -> para ocupar a tela toda com altura de 100vh (100% da altura da janela de visualização - "viewport height") */
+/*   Alinhamento do loguin/formulario no meio horizontal -> aling-itens = start                                                          */
+/*   Dimensionamento com display flex                                                                                                    */
+/*****************************************************************************************************************************************/
 body {
     font-family: 'Kanit', sans-serif;
     background: #050758;
-    overflow: auto;
     align-items: flex-start;
     display: flex;
     justify-content: flex-start;
   
-    /* Adicione esta linha */
   }
   
   

@@ -1,45 +1,57 @@
-/*
-    Corpo da página
+/***********************************************************************************************************************************z*****/
+/****                                               [Corpo da página]                                                                 ****/
+/*   Imagem de fundo cover -> para ocupar a tela toda com altura de 100vh (100% da altura da janela de visualização - "viewport height") */
+/*   Alinhamento do loguin/formulario no meio horizontal -> aling-itens = start                                                          */
+/*   Dimensionamento com display flex                                                                                                    */
+/*****************************************************************************************************************************************/
 
-    Imagem de fundo cover -> para ocupar a tela toda
-    Alinhamento do loguin/formulario no meio horizontal -> aling-itens = start 
-
-*/
 body {
     font-family: Arial, sans-serif;
     background-image: url(https://essolar.com.br/wp-content/uploads/2020/05/essolar1305.png);
+    height: 100vh;
     background-size: cover;
     display: flex;
     align-items: start;
-
 }
 
+/*********************************************************/
+/****                [Janela de Login]                ****/
+/*  Margem superior = 30px, direira = auto, esquerda = 0 */
+/*  Não terá fundo escuro/sombra ->  box-shadow: 0;      */
+/*********************************************************/
 .container {
-    max-width: 400px;
     margin: 30px auto 0;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.582);
+    border-radius: 40px;
     box-shadow: 0;
+    color: #ffffff;
 }
 
-
+/**********************/
+/****[Texto ~titulo]****/
+/***********************/
 .container h2 {
     text-align: center;
 }
 
-.container .user-icon {
+/**********************/
+/****[Icone do sol]****/
+/**********************/
+.container .user-icon { 
     text-align: center;
     margin-bottom: 20px;
 }
-
 .container .user-icon img {
     width: 100px;
     height: 100px;
 }
 
+/************************/
+/****[Texto de senha]****/
+/************************/
 .container input[type="text"],
-.container input[type="password"] {
+.container input[type="password"] {  
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -49,17 +61,25 @@ body {
     border-radius: 4px;
 }
 
-.container label[for="username"] {
+/**************************/
+/****[Texto de usuário]****/
+/**************************/
+.container label[for="username"],
+.container label[for="password"] {
     font-size: 14px;
 }
 
+/**************************************************/
+/****[Textos menores (lembrar e revelar senha)]****/
+/**************************************************/
 .container label[for="remember"],
 .container label[for="revealPassword"] {
     font-size: 12px;
-    display: inline-block;
-    margin-right: 10px;
 }
 
+/*************************/
+/****[Botão de Entrar]****/
+/*************************/
 .container button {
     background-color: #4CAF50;
     color: #ffffff;
@@ -68,25 +88,5 @@ body {
     border: none;
     cursor: pointer;
     width: 100%;
-    border-radius: 4px;
-}
-
-.container button:hover {
-    background-color: #45a049;
-}
-
-.remember-container {
-    margin-top: 10px;
-}
-
-.remember-container::before {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-@media screen and (max-width: 500px) {
-    .container {
-        width: 80%;
-    }
+    border-radius: 14px;
 }
