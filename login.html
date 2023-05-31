@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/login.css">
+    <title>Login - Telemetria </title>
+</head>
+
+
+<!--
+---- O modelo de login será feito com a ideia de formulario, contendo ícone
+---- do usuário, username e senha e botão identificado pelo click do usuário.
+---- ou pressionando a tecla "Enter"
+-->
+
+<body>
+    <div class="container">
+        <div class="user-icon">
+            <img src="./src/images/itens/solaressol.png" alt="Ícone do Usuário">
+        </div>
+
+        <h2>[Catamarã ~Poente] </h2>
+        <form>
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" placeholder="Digite seu e-mail">
+
+            <div class="remember-container">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Lembrar usuário</label>
+            </div>
+
+            <label for="password"><br>Senha:</label>
+            <input type="password" id="password" name="password" placeholder="Digite sua senha">
+
+            <div class="reveal-password">
+                <input type="checkbox" id="revealPassword" name="revealPassword">
+                <label for="revealPassword">Revelar senha</label>
+            </div>
+
+            <button type="button" onclick="login()">Entrar</button>
+        </form>
+    </div>
+    <!--
+    ---- script referente ao loguin:    
+    -->
+    <script src="./src/js/login.js"></script>
+</body>
+</html>
