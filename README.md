@@ -141,3 +141,19 @@ Orientações para aplicação Web:
     
  ● Botão para Sair/Retornar a tela de login
  
+## Slides da apresentação:
+ ![image](https://github.com/DsBrito/Solares-Trainee/assets/80075307/0946667e-a578-4ea3-94a8-b94f9dc48caa)
+
+ ![image](https://github.com/DsBrito/Solares-Trainee/assets/80075307/89d0d056-ebc8-428f-b58e-4868bd7c7523)
+ 
+ ![image](https://github.com/DsBrito/Solares-Trainee/assets/80075307/4db73af9-0e23-4462-96ae-5356d7b8c4de)
+
+ ![image](https://github.com/DsBrito/Solares-Trainee/assets/80075307/1bef2239-55aa-4909-87bd-94d4725489c3)
+
+ ![image](https://github.com/DsBrito/Solares-Trainee/assets/80075307/f2a715f4-855a-4187-9b72-a78c4844e604)
+
+ ![image](https://github.com/DsBrito/Solares-Trainee/assets/80075307/c3303bcd-501f-4f98-8c13-72d87f9594fc)
+
+ ![image](https://github.com/DsBrito/Solares-Trainee/assets/80075307/a122803d-15c5-4b2a-a4b6-882214f0439f)
+
+ ![image](https://github.com/DsBrito/Solares-Trainee/assets/80075307/7fb4ceff-9f5c-40ed-908e-4bd14d300f7d)
