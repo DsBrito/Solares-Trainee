@@ -24,7 +24,6 @@ header {
 }
 
 header #changeLight {
-  background: none;
   border: none;
 }
 
@@ -54,7 +53,8 @@ header .theme-image {
 }
 
 header .logo.logo:hover,
-header .theme-image:hover {
+header .theme-image:hover,
+header .string-container:hover {
   transform: scale(1.15);
   cursor: pointer;
   transition: 0.2s ease-in-out;
@@ -190,7 +190,7 @@ h1 {
   box-sizing: border-box;
 }
 
-#logoffButton{
+#logoffButton {
   font-size: 14px;
   border: 4px outset yellow;
   background-color: yellow;

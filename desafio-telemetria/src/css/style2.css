@@ -1,209 +1,198 @@
-/*****************************************************************************************************************************************/
-/****                                               [Corpo da página]                                                                 ****/
-/*   Imagem de fundo cover -> para ocupar a tela toda com altura de 100vh (100% da altura da janela de visualização - "viewport height") */
-/*   Alinhamento do loguin/formulario no meio horizontal -> aling-itens = start                                                          */
-/*   Dimensionamento com display flex                                                                                                    */
-/*****************************************************************************************************************************************/
+/*************************************************/
+/****              [Corpo da página]          ****/
+/*    Dimensionamento com display flex           */
+/*************************************************/
 body {
-    font-family: 'Kanit', sans-serif;
-    background: #050758;
-    align-items: flex-start;
-    display: flex;
-    justify-content: flex-start;
-  
-  }
-  
-  
-  body.black-mode {
-    background-color: #212121;
-    color: #f5f5f5;
-  }
-  
-  /************************************/
-  /* background - cabeça */
-  header {
-    display: flex;
-    justify-content: space-between;
-    padding: none;
-  }
-  
-  header #changeLight {
-    background: none;
-    border: none;
-  }
-  
-  
-  
-  header .logo {
-    width: 200px;
-    background: none;
-    padding: none;
-    border-radius: 200px;
-    align-self: flex-start; /* Add this line */
-    margin-top: 10px; /* Add this line */
-  }
-  
-  
-  header .theme-image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 70px;
-    background: none;
-    padding: none;
-    border-radius: 100px;
-  }
-  
-  header .logo.logo:hover,
-  header .theme-image:hover {
-    transform: scale(1.15);
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-  
-  }
-  
-  header button {
-    width: 100px;
-    height: 400px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  /************************************/
-  /*variáveis booleanas*/
-  .string-container {
-    text-align: center;
-  }
-  
-  .string-container button {
-  
-    width: 100px;
-    height: 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .off {
-    border: 4px outset reds;
-    background-color: red;
-    box-sizing: border-box;  }
-  
-  .on {
-    border: 4px outset green;
-    background-color: green;
-    box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+  background: #050758;
+  display: flex;
+  justify-content: flex-start;
+}
 
-  }
-  
-  #logoffButton{
-    font-size: 14px;
-    border: 4px outset yellow;
-    background-color: yellow;
-    padding: 10px;
-    box-sizing: border-box;
-  }
+body.black-mode {
+  background-color: #212121;
+  color: #f5f5f5;
+}
 
-  #toggleSolar2,
-  #toggleSolar1 {
-    text-align: center;
-  }
-  
-  
-  /************************************/
-  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-  
-  /*resultado (variáveis retiradas do site))*/
-  h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    color: rgb(250, 235, 250);
-    left: 0;
-    position: center;
-  }
-  
-  #info {
-    font-size: 14px;
-    border: 4px outset yellow;
-    width: 400px;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  
+/*************************************************/
+/****       [Cabeçario/cabeça da página]      ****/
+/*************************************************/
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: none;
+}
 
+header button {
+  width: 0px;
+  height: 0px;
+}
 
+/*************************************************/
+/****  [Containes ~string, gráficos, botões]  ****/
+/*************************************************/
+.string-container {
+  text-align: center;
+}
 
-  /************************************/
-  @import url("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css");
-  
-  #engineCurrent,
-  #batteryCurrent,
-  #engineSpeed {
-    border: 4px outset yellow;
-  
-    box-sizing: border-box;
-  
-    font-size: 16px; /* Increase the font size value as needed */
-    max-width: 100%;
-    width: 450px;
-    height: 200px;
-    margin-bottom: 20px;
-  }
-  
-  
-  /* grafíco - Velocidade do motor e */
-  .chart-engine-speed {
-    max-width: 100%;
-    width: 450px;
-    height: 200px;
-    margin-bottom: 20px;
-  }
-  
-  /* grafíco - corrente do motor e */
-  .chart-engine-current {
-    max-width: 100%;
-    width: 450px;
-    height: 200px;
-    margin-bottom: 20px;
-  }
-  
-  /* grafíco - corrente da bateria */
-  .chart-battery-current {
-    max-width: 100%;
-    width: 460px;
-    height: 200px;
-    margin-bottom: 20px;
-  
-  }
-  
-  
-  
-  
-  #map {
-    max-width: 100%;
-    height: 600px; /* Increase the height value as needed */
-    font-size: 14px;
-    border: 4px outset yellow;
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
+.string-container button {
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-  }
-  
-  .chart-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    height: 30px; /* Increase the height value as needed */
-  }
-  
-  .chart-container > div {
-    flex: 1;
-    margin-right: 10px;
-    height: 100%; /* Add this line */
-  }
-  
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 30px;
+}
+
+.chart-container>div {
+  flex: 1;
+  margin-right: 10px;
+  height: 100%;
+}
+
+/********************************************************/
+/****    [Aproximação dos gráficos/ botões/ tema]   ****/
+/*******************************************************/
+.chart-container:hover,
+.theme-image:hover,
+.string-container:hover {
+  transform: scale(1.15);
+  cursor: pointer;
+}
+
+/***************************************************/
+/****    [Variáveis ON/OFF ~String Solar 1-2]   ****/
+/***************************************************/
+#toggleSolar2,
+#toggleSolar1 {
+  text-align: center;
+}
+
+.off {
+  border: 4px outset reds;
+  background-color: red;
+  box-sizing: border-box;
+}
+
+.on {
+  border: 4px outset green;
+  background-color: green;
+  box-sizing: border-box;
+}
+
+/*****************************************************/
+/****    [Imagens ~logo e tema (escuro-claro)]    ****/
+/*****************************************************/
+.logo {
+  width: 200px;
+  background: none;
+  padding: none;
+  border-radius: 200px;
+  align-self: flex-start;
+}
+
+.theme-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  background: none;
+  padding: none;
+  border-radius: 100px;
+}
+
+/*********************************************/
+/****            [Botão Logoff]          ****/
+/********************************************/
+#logoffButton {
+  font-size: 14px;
+  border: 4px outset yellow;
+  background-color: yellow;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/*******************************************************************************/
+/****        [Resultado das informações retiradas do site/servidor]        ****/
+/******************************************************************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: rgb(250, 235, 250);
+  left: 0;
+  position: center;
+}
+
+#info {
+  font-size: 14px;
+  border: 4px outset yellow;
+  width: 400px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/*********************************************/
+/****               [Mapa]                ****/
+/********************************************/
+#map {
+  max-width: 100%;
+  height: 600px;
+  /* Increase the height value as needed */
+  font-size: 14px;
+  border: 4px outset yellow;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/*********************************************/
+/****              [Gráficos]             ****/
+/********************************************/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css");
+
+#engineCurrent,
+#batteryCurrent,
+#engineSpeed {
+  border: 4px outset yellow;
+  box-sizing: border-box;
+  font-size: 16px;
+  max-width: 100%;
+  width: 450px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+/* grafíco - Velocidade do motor e */
+.chart-engine-speed {
+  max-width: 100%;
+  width: 450px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+/* grafíco - corrente do motor e */
+.chart-engine-current {
+  max-width: 100%;
+  width: 450px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+/* grafíco - corrente da bateria */
+.chart-battery-current {
+  max-width: 100%;
+  width: 460px;
+  height: 200px;
+  margin-bottom: 20px;
+}
