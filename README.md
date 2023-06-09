@@ -1,5 +1,5 @@
 ## ☀️SOLARES - DESAFIO TRAINEE ~TELEMETRIA☀️
-<img align="right" src="https://lh3.googleusercontent.com/p/AF1QipOPDBE2AO9hCN70eyT7KTMLv3yZKBJLiyuZLNYd=s680-w680-h510">
+<img align="right" width="60%" src="https://lh3.googleusercontent.com/p/AF1QipOPDBE2AO9hCN70eyT7KTMLv3yZKBJLiyuZLNYd=s680-w680-h510">
 
 <h3 align="left">Sobre o Solares:</h3>
  </a>
